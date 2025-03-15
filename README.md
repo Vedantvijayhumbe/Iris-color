@@ -23,6 +23,7 @@ C:\Users\lenovo\AppData\Roaming\Python\Python313\Scripts
 ```
 
 Now, you should be able to run flask from anywhere.
+4)Run only app.py ,no other py to finally deploy it locally . ignore the warninngs from terminal 
 
 3) to fix the iri.pkl issue create a new fitted model .
 
