@@ -26,8 +26,12 @@ Now, you should be able to run flask from anywhere.
 
 3) to fix the iri.pkl issue create a new fitted model .
 
-   ```
-   import pickle
+This script trains a RandomForestClassifier on the Iris dataset and saves it as `iri.pkl`.
+
+## Python Code
+
+```python
+import pickle
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
@@ -35,7 +39,6 @@ from sklearn.model_selection import train_test_split
 iris = load_iris()
 X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.2, random_state=42)
 
-# RF
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
@@ -43,6 +46,5 @@ with open("iri.pkl", "wb") as file:
     pickle.dump(model, file)
 
 print("Model trained and saved as iri.pkl")
-```
 
 4)run app.py only 
